@@ -1,9 +1,16 @@
-FILE_PATH = "tools/remove_new_line/text_in.txt"
+FILE_PATH = "remove_new_line/text_in.txt"
 
 def main():
     print("Runing... ", end="")
-    with open(FILE_PATH, "r") as f:
-        txt = f.read()
+    
+    try:
+        with open(FILE_PATH, "r") as f:
+            txt = f.read()
+    except FileNotFoundError:
+        print("Created text file.")
+        f = open(FILE_PATH, "w")
+        f.close()
+        return
     txt = txt.replace("\n", " ").replace("", "")
     with open(FILE_PATH, "w") as f:
         f.write(txt)
