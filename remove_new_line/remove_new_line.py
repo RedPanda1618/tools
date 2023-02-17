@@ -1,8 +1,9 @@
-FILE_PATH = "remove_new_line/text_in.txt"
+FILE_PATH = "tools/remove_new_line/text_in.txt"
+
 
 def main():
     print("Runing... ", end="")
-    
+
     try:
         with open(FILE_PATH, "r") as f:
             txt = f.read()
@@ -15,6 +16,7 @@ def main():
     with open(FILE_PATH, "w") as f:
         f.write(txt)
     print("Done.")
-    
+
+
 if "__main__" == __name__:
     main()
