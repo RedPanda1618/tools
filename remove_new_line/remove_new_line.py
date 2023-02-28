@@ -1,4 +1,4 @@
-FILE_PATH = "tools/remove_new_line/text_in.txt"
+FILE_PATH = "remove_new_line/text_in.txt"
 
 
 def main():
